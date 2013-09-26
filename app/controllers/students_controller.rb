@@ -6,7 +6,7 @@ class StudentsController < ApplicationController
   def show
     @data = {
       'harsh' => {
-        name: "Harsh",
+        name: "Harsh Patel",
         city: "St.Louis",
         description: "The Indian man with glasses",
         picture_url: "http://goo.gl/GwwMqe"
@@ -18,14 +18,14 @@ class StudentsController < ApplicationController
         picture_url: "http://goo.gl/GwwMqe"
       },
        'ravi' => {
-        name: "Ravi",
+        name: "Ravi Parikh",
         city: "Everywhere, U.S.A.",
         description: "Co-founder and general badass",
         picture_url: "http://goo.gl/GwwMqe"
       }
     }
-    instructor_name = params[:username]
-    @specific_data = @data[instructor_name]
+    @instructor_name = params[:username]
+    @specific_data = @data[@instructor_name]
   end
 
 
