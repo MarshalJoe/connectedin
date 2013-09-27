@@ -1,7 +1,9 @@
-<h1>My name is <%= @specific_data[:name] %></h1>
+<h1>Hello, my name is <%= @specific_profile.show_full_name%></h1>
+<p>Username: <%= @specific_profile.username %></p>
 
-<img src = "<%= @specific_data[:picture_url] %>"/>
+<img src="<%= @specific_profile.city_pic %>"/>
+<img src="<%= @specific_profile.profile_pic %>"/>
 
-<p>I'm from <%= @specific_data[:city] %> </p>
 
-<p><%= @specific_data[:description] %></p>
+<p><%= @specific_profile.description %></p>
+<%= link_to "Facebook", @specific_profile.facebook_page %>

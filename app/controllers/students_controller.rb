@@ -24,10 +24,14 @@ class StudentsController < ApplicationController
         picture_url: "http://goo.gl/GwwMqe"
       }
     }
-    @instructor_name = params[:username]
-    @specific_data = @data[@instructor_name]
+
+    username = params[:username]
+    @specific_profile = Profiles.find_by_username(username)
   end
 
+  def index
+    @profiles = Profiles.all
+  end
 
 end
 

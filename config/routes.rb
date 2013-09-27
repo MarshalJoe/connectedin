@@ -1,6 +1,7 @@
 Connectedin::Application.routes.draw do
   
-  get "/profiles" => "students#show_all", as: 'show_all_profiles'
+  root "students#index"
+  get "/profiles" => "students#index"
   get "/profiles/:username" => "students#show", as: 'show_profile'
 
 end

@@ -1,0 +1,6 @@
+<ul> List of Awesome Students <br></br>
+	<% @profiles.each do |p| %>
+	<li><%= link_to p.first_name, show_profile_path(p.username) %></li>
+	<br></br>
+	<% end %>
+</ul>
